@@ -43,8 +43,8 @@ let upload = multer({ storage: storage });
 let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'medixoehealth',
-        pass: 'boupdtqanzqxslcg'
+        user: 'sadeeeparuwanpura',
+        pass: 'pvylzomsuhntvrdn'
     }
 });
 
@@ -68,32 +68,40 @@ router.route("/addContact").post(upload.single("file_path"), (req, res) => {
         massage
     });
 
-    /*
-        const mailOptions = {
-            from: 'medixoehealth@gmail.com',
-            to: email,
-            subject: 'Appointment details',
-            text: `Dear ${first_name},\n\nYour Lab appointment Number is ${appNo}. it has been scheduled for ${date} at ${appTime}.\n\nThank you for choosing our hospital.
-            (This is a system generated email)`
-        };
-    
-    */
+
+    const mailOptions = {
+        from: 'sadeeeparuwanpura@gmail.com',
+        to: email,
+        subject: 'Thank You for Contacting Us',
+        text: `Dear ${name},\n\nThank you for contacting us. I have received your message and will get back to you shortly.\n\nBest regards,\nSadeepa\n(This is a system generated Email don't reply this)`
+    };
+
+    const mailOptions2 = {
+        from: 'sadeeeparuwanpura@gmail.com',
+        to: 'sadeepalakshan0804@gmail.com',
+        subject: 'Remind Contact Person',
+        text: `Mr ${name} like to connect with you.\nSubject:${subject}\nmassage:${massage}`
+    };
+
 
 
     //then() js promice
     newlabAppoinment.save().then(function () {
 
-
-        /*
-                transporter.sendMail(mailOptions, function (error, info) {
-                    if (error) {
-                        console.log(error);
-                    } else {
-                        console.log('Email sent: ' + info.response);
-                    }
-                });
-        
-        */
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+        transporter.sendMail(mailOptions2, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
 
         //give response json format
         res.json("Employee added success");
