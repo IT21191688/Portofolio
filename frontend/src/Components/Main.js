@@ -27,11 +27,78 @@ export default function Main() {
 
                 <nav id="navbar" class="nav-menu navbar">
                     <ul>
-                        <li><Link style={{ cursor: "pointer" }} to='hero' spy={true} smooth={true} offset={-40} duration={200} onClick={closeMenu} className="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></Link></li>
-                        <li><Link style={{ cursor: "pointer" }} to='about' spy={true} smooth={true} offset={-40} duration={200} onClick={closeMenu} className="nav-link scrollto active"><i class="bx bx-home"></i> <span>About</span></Link></li>
-                        <li><Link style={{ cursor: "pointer" }} to='skills' spy={true} smooth={true} offset={-40} duration={200} onClick={closeMenu} className="nav-link scrollto active"><i class="bx bx-home"></i> <span>Skills</span></Link></li>
-                        <li><Link style={{ cursor: "pointer" }} to='contact' spy={true} smooth={true} offset={0} duration={200} onClick={closeMenu} className="nav-link scrollto active"><i class="bx bx-home"></i> <span>Contact</span></Link></li>
+                        <li>
+                            <Link
+                                style={{ cursor: "pointer" }}
+                                to="hero"
+                                spy={true}
+                                smooth={true}
+                                offset={-40}
+                                duration={200}
+                                onClick={closeMenu}
+                                className="nav-link scrollto active"
+                            >
+                                <i className="fas fa-home"></i> <span>Home</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                style={{ cursor: "pointer" }}
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-40}
+                                duration={200}
+                                onClick={closeMenu}
+                                className="nav-link scrollto active"
+                            >
+                                <i className="fas fa-user"></i> <span>About</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                style={{ cursor: "pointer" }}
+                                to="skills"
+                                spy={true}
+                                smooth={true}
+                                offset={-40}
+                                duration={200}
+                                onClick={closeMenu}
+                                className="nav-link scrollto active"
+                            >
+                                <i className="fas fa-code"></i> <span>Skills</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                style={{ cursor: "pointer" }}
+                                to="projects"
+                                spy={true}
+                                smooth={true}
+                                offset={-40}
+                                duration={200}
+                                onClick={closeMenu}
+                                className="nav-link scrollto active"
+                            >
+                                <i className="fas fa-project-diagram"></i> <span>Projects</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                style={{ cursor: "pointer" }}
+                                to="contact"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={200}
+                                onClick={closeMenu}
+                                className="nav-link scrollto active"
+                            >
+                                <i className="fas fa-envelope"></i> <span>Contact</span>
+                            </Link>
+                        </li>
                     </ul>
+
                 </nav>
             </div>
             <br></br>

@@ -6,6 +6,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Contacts from './Components/Contacts';
+import Projects from './Components/Projects';
 
 function App() {
   return (
@@ -15,10 +16,12 @@ function App() {
       <Home />
       <About />
       <Resume />
+      <Projects />
       <Contacts />
 
-    </div >
+      {/*"homepage": "https://IT21191688.github.io/Portofolio",*/}
 
+    </div>
 
   );
 }
