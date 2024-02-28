@@ -7,6 +7,7 @@ import exam from '../Images/onlineexamination.png'
 import more from '../Images/ProjectManagement.jpg'
 import educode from '../Images/educode.png'
 import divlink from '../Images/divlink.png'
+import devstack from '../Images/devstack.png'
 
 
 export default function Projects() {
@@ -86,6 +87,22 @@ export default function Projects() {
                                     <h5 class="card-title">Edu Code</h5>
                                     <p class="card-text">In the system, I took a pivotal role in developing a unique Online Code Editor with Voice Recognition, enhancing code editing capabilities, and enabling real-time voice command transcription through the 'Voice Recognition System.' Additionally, I strengthened security and access control by implementing user authentication with JWT tokens, contributing to an exceptional coding experience.</p>
                                     <a href="https://github.com/IT21191688/SPM_Project-MERN-" class="btn btn-primary">Code</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 mt-3">
+                            <div class="card">
+                                <img class="card-img-top" src={devstack} alt="Project 4 Image" style={{ height: '160px' }} />
+                                <div class="card-body">
+                                    <h5 class="card-title">The Shop E-Commerce</h5>
+                                    <p class="card-text">Within the system, I designed and made a lively online shop using special tools like
+                                        MERN stack, TypeScript, React (Vite), and Cloudinary for pictures. I organized how
+                                        users, products, orders, reviews, shopping carts, payments, and help services work
+                                        together. I also added good ways to create reports and send emails, making
+                                        shopping easier for everyone.</p>
+                                    <a href="https://github.com/IT21191688/e-commerce-dev-backend" class="btn btn-primary">Backend</a>&nbsp;
+                                    <a href="https://github.com/IT21191688/e-commerce-dev-frontend" class="btn btn-primary">Frontend</a>
                                 </div>
                             </div>
                         </div>
