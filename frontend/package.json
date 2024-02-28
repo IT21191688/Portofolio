@@ -1,5 +1,5 @@
 {
- "homepage": "https://it21191688.github.io/Portofolio/",
+  "homepage": "https://it21191688.github.io/Portofolio/",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -45,5 +45,3 @@
     ]
   }
 }
-
-
