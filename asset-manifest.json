@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/Portofolio/static/css/main.073c9b0a.css",
-    "main.js": "/Portofolio/static/js/main.9a816936.js",
+    "main.js": "/Portofolio/static/js/main.bbcf8c66.js",
     "static/js/787.cda612ba.chunk.js": "/Portofolio/static/js/787.cda612ba.chunk.js",
     "static/media/hospitalmanagements.png": "/Portofolio/static/media/hospitalmanagements.1873fc4ff821dd5bdc13.png",
-    "static/media/SadeepaLakshan_CV.pdf": "/Portofolio/static/media/SadeepaLakshan_CV.3409af0ad988929f4542.pdf",
+    "static/media/SadeepaLakshan_CV.pdf": "/Portofolio/static/media/SadeepaLakshan_CV.05b84b40d678433ecd0e.pdf",
     "static/media/financemanagement.png": "/Portofolio/static/media/financemanagement.24d80df88fee7f35e485.png",
     "static/media/devstack.png": "/Portofolio/static/media/devstack.0233992844b671526915.png",
     "static/media/onlineexamination.png": "/Portofolio/static/media/onlineexamination.a046a6522b3cb0615b17.png",
@@ -17,11 +17,11 @@
     "index.html": "/Portofolio/index.html",
     "static/media/logo.svg": "/Portofolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "main.073c9b0a.css.map": "/Portofolio/static/css/main.073c9b0a.css.map",
-    "main.9a816936.js.map": "/Portofolio/static/js/main.9a816936.js.map",
+    "main.bbcf8c66.js.map": "/Portofolio/static/js/main.bbcf8c66.js.map",
     "787.cda612ba.chunk.js.map": "/Portofolio/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.9a816936.js"
+    "static/js/main.bbcf8c66.js"
   ]
 }
