@@ -893,6 +893,7 @@ export default function Projects() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [hoveredProject, setHoveredProject] = useState(null);
 
+  console.log(hoveredProject);
   const projects = [
     {
       id: 1,
