@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portofolio/static/css/main.e3c4ed2f.css",
-    "main.js": "/Portofolio/static/js/main.f74443fa.js",
+    "main.js": "/Portofolio/static/js/main.cf1cd972.js",
     "static/js/787.cda612ba.chunk.js": "/Portofolio/static/js/787.cda612ba.chunk.js",
     "static/media/hospitalmanagements.png": "/Portofolio/static/media/hospitalmanagements.1873fc4ff821dd5bdc13.png",
     "static/media/profileImg.jpg": "/Portofolio/static/media/profileImg.5f191546601f8ac85651.jpg",
@@ -14,11 +14,11 @@
     "static/media/educode.png": "/Portofolio/static/media/educode.b6112cbdcf30476206ba.png",
     "index.html": "/Portofolio/index.html",
     "main.e3c4ed2f.css.map": "/Portofolio/static/css/main.e3c4ed2f.css.map",
-    "main.f74443fa.js.map": "/Portofolio/static/js/main.f74443fa.js.map",
+    "main.cf1cd972.js.map": "/Portofolio/static/js/main.cf1cd972.js.map",
     "787.cda612ba.chunk.js.map": "/Portofolio/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e3c4ed2f.css",
-    "static/js/main.f74443fa.js"
+    "static/js/main.cf1cd972.js"
   ]
 }
