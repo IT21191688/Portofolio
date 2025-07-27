@@ -350,6 +350,8 @@ export default function Main() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
+  console.log("Active Section:", activeSection);
+
   const handleClick = () => setClick(!click);
   const closeMenu = () => setClick(false);
 
