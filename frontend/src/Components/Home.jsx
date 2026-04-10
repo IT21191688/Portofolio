@@ -1618,7 +1618,7 @@ export default function Home() {
 
             <div className="hero-stats fade-in-up">
               <div className="stat-item">
-                <div className="stat-number gradient-text">1+</div>
+                <div className="stat-number gradient-text">2+</div>
                 <div className="stat-label">Years Experience</div>
               </div>
               <div className="stat-divider"></div>

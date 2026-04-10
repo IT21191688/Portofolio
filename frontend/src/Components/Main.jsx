@@ -710,8 +710,6 @@ export default function Main() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
-  console.log("Active Section:", activeSection);
-
   const handleClick = () => setClick(!click);
   const closeMenu = () => setClick(false);
 
@@ -722,6 +720,23 @@ export default function Main() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const isMobileView = window.innerWidth <= 1024;
+    document.body.style.overflow = click && isMobileView ? "hidden" : "";
+
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        setClick(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [click]);
 
   const navItems = [
     { to: "hero", icon: "🏠", label: "Home" },
@@ -735,8 +750,8 @@ export default function Main() {
   const handleDownloadCV = () => {
     // Create a link element and trigger download
     const link = document.createElement("a");
-    link.href = "/assets/cv/Sadeepa-Ruwanpura-CV.pdf"; // Update this path to match your CV location
-    link.download = "Sadeepa-Ruwanpura-CV.pdf";
+    link.href = `${import.meta.env.BASE_URL}assets/cv/SadeepaLakshan_CV.pdf`;
+    link.download = "SadeepaLakshan_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -784,6 +799,7 @@ export default function Main() {
               className={`mobile-toggle ${click ? "active" : ""}`}
               onClick={handleClick}
               aria-label="Toggle menu"
+              aria-expanded={click}
             >
               <span></span>
               <span></span>
@@ -792,6 +808,11 @@ export default function Main() {
           </div>
         </div>
       </header>
+
+      <div
+        className={`nav-backdrop ${click ? "active" : ""}`}
+        onClick={closeMenu}
+      ></div>
 
       <style jsx>{`
         .fixed-header {
@@ -904,6 +925,10 @@ export default function Main() {
           gap: 1rem;
         }
 
+        .nav-backdrop {
+          display: none;
+        }
+
         .mobile-toggle {
           display: none;
           flex-direction: column;
@@ -965,24 +990,51 @@ export default function Main() {
         }
 
         @media (max-width: 1024px) {
+          .nav-backdrop {
+            display: block;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+            z-index: 999;
+          }
+
+          .nav-backdrop.active {
+            opacity: 1;
+            pointer-events: auto;
+          }
+
           .nav-menu {
             position: fixed;
             top: 80px;
-            left: 0;
-            right: 0;
+            left: 0.75rem;
+            right: 0.75rem;
             background: rgba(10, 10, 10, 0.98);
             backdrop-filter: blur(20px);
             flex-direction: column;
-            padding: 2rem;
-            transform: translateY(-100%);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-bottom: 1px solid rgba(255, 107, 107, 0.2);
+            padding: 1.25rem;
+            max-height: calc(100vh - 100px);
+            overflow-y: auto;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(-12px) scale(0.98);
+            transition: transform 0.25s ease, opacity 0.25s ease,
+              visibility 0.25s ease;
+            border: 1px solid rgba(255, 107, 107, 0.2);
+            border-radius: 16px;
             gap: 1rem;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
           }
 
           .nav-menu.active {
-            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0) scale(1);
           }
 
           .mobile-toggle {
@@ -1019,7 +1071,10 @@ export default function Main() {
 
           .nav-menu {
             top: 70px;
-            padding: 1.5rem;
+            left: 0.6rem;
+            right: 0.6rem;
+            padding: 1rem;
+            max-height: calc(100vh - 86px);
           }
 
           .nav-link {
@@ -1031,6 +1086,7 @@ export default function Main() {
           .modern-btn {
             padding: 0.6rem 1rem;
             font-size: 0.8rem;
+            display: none;
           }
         }
 
@@ -1045,7 +1101,11 @@ export default function Main() {
 
           .nav-menu {
             top: 60px;
-            padding: 1rem;
+            left: 0.5rem;
+            right: 0.5rem;
+            max-height: calc(100vh - 74px);
+            padding: 0.85rem;
+            border-radius: 14px;
           }
 
           .nav-link {

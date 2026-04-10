@@ -863,7 +863,7 @@ export default function Resume() {
                 <div className="summary-content">
                   <h4>Full-Stack Development</h4>
                   <p>
-                    Expert in modern web technologies with 1+ years of
+                    Expert in modern web technologies with 2+ years of
                     professional experience
                   </p>
                 </div>

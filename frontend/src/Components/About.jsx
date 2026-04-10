@@ -977,14 +977,14 @@ export default function About() {
     { icon: "🎂", label: "Birthday", value: "5 July 2000" },
     { icon: "📱", label: "Phone", value: "+94 713 477 746" },
     { icon: "🌍", label: "Location", value: "Colombo, Sri Lanka" },
-    { icon: "🎓", label: "Age", value: "24 Years" },
+    { icon: "🎓", label: "Age", value: "26 Years" },
     {
       icon: "🎯",
       label: "Degree",
       value: "BSc (Hons) IT - Software Engineering",
     },
     { icon: "✉️", label: "Email", value: "sadeepalakshan0804@gmail.com" },
-    { icon: "💼", label: "Experience", value: "1+ Years Professional" },
+    { icon: "💼", label: "Experience", value: "2+ Years Professional" },
     { icon: "🚀", label: "Status", value: "Available for opportunities" },
   ];
 
@@ -1192,7 +1192,7 @@ export default function About() {
                   full-time at LayoutIndex.
                 </p>
                 <p>
-                  With over a year of professional experience, I've developed
+                  With over two years of professional experience, I've developed
                   and maintained enterprise-level applications including POS
                   systems, self-service kiosks, and complex payment gateway
                   integrations. My journey combines academic excellence with

@@ -25,6 +25,13 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg-primary);
@@ -32,11 +39,48 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 .App {
   position: relative;
   min-height: 100vh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+input,
+textarea,
+select,
+button {
+  max-width: 100%;
+  font: inherit;
+}
+
+.section {
+  scroll-margin-top: 90px;
 }
 
 /* Gradient Mesh Background */
@@ -329,6 +373,10 @@ a:focus {
   .section {
     padding: 80px 0;
   }
+
+  .section {
+    scroll-margin-top: 78px;
+  }
   
   .section-title {
     margin-bottom: 3rem;
@@ -347,10 +395,25 @@ a:focus {
   .section {
     padding: 60px 0;
   }
+
+  .section {
+    scroll-margin-top: 68px;
+  }
   
   .modern-btn {
     padding: 12px 24px;
     font-size: 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
